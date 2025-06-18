@@ -154,7 +154,7 @@ footer {
     }
 
     .articles {
-        display:grid;
+        display: grid;
         grid-template-columns: 1fr;
     }
 
@@ -196,15 +196,15 @@ footer {
 
 @media (max-width: 480px) {
     .articles {
-        grid-template-columns: 1fr; /* Force 1 column */
+        grid-template-columns: 1fr;
     }
 
     .article {
-        background-color: #ffb3c1; /* Optional: differentiate smallest layout */
+        background-color: #ffb3c1;
     }
 
     .navigation {
-        grid-column: span 1; /* Can span 1 on narrow view */
+        grid-column: span 1;
     }
 
     .publicidad {
