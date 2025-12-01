@@ -18,6 +18,8 @@ header {
 .topbanner {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    padding: 20px;
     background-color: #2c4059;
 }
 
@@ -66,22 +68,19 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 10em;
+    gap: 1em;
     padding: 1em;
+    margin-bottom: 1em;
     background-color: black;
 }
 
 section {
     gap: 10px;
-    padding: 10px;
-    background-color: #2c4059;
 }
 
 .content {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1em;
-
 }
 
 .articles {
@@ -108,21 +107,22 @@ section {
 
 .publi {
     background-color: #ea5455;
-    padding: 10px;
 }
 
 .publicidad {
     flex: 1;
-    background-color: #ea5455;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     padding: 10px;
 }
 
 .ad {
     background-color: #fed700;
+    justify-content: top;
     padding: 10px;
-    margin: 10px 0;
+    margin: 0 0 10px;
+    width: 100%; box-sizing: border-box;
 }
 
 footer {
@@ -134,8 +134,8 @@ footer {
 
 .pie {
     margin-top: 1em;
-    padding: 10px;
-    background-color: black;
+    padding: 1em;
+    background-color: #2a2a2a;
 }
 
 @media (max-width: 768px) {
@@ -149,11 +149,12 @@ footer {
 
     .articles {
         display:grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .publicidad {
         display: flex;
+        justify-content: center; align-items: center;
         flex-direction: column;
         gap: 10px;
     }
@@ -177,35 +178,26 @@ footer {
     .navigation {
         background-color: #8ecae6;
     }
-
-    footer {
-        background-color: #2a2a2a;
-    }
-
-    .pie {
-        background-color: #ffd166;
-        color: black;
-    }
 }
 
 @media (max-width: 480px) {
-  .articles {
-    grid-template-columns: 1fr; /* Force 1 column */
-  }
+    .articles {
+        grid-template-columns:1fr;
+    }
 
-  .article {
-    background-color: #ffb3c1; /* Optional: differentiate smallest layout */
-  }
+    .article {
+        background-color: #ffb3c1;
+    }
 
-  .navigation {
-    grid-column: span 1; /* Can span 1 on narrow view */
-  }
+    .navigation {
+        grid-column: span 1;
+    }
 
-  .publicidad {
-    flex-direction: column;
-  }
+    .publicidad {
+        flex-direction: column;
+    }
 
-  .ad {
-    flex: unset;
-  }
+    .ad {
+        flex: unset;
+    }
 }
